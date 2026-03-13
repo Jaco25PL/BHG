@@ -16,7 +16,9 @@ const DETECTOR_LABELS = {
 
 function getLabel(name) {
   if (DETECTOR_LABELS[name]) return DETECTOR_LABELS[name];
-  // Convert CamelCase detector names to readable text as a fallback
+  // Already a readable string (e.g. "Prompt Injection") — return as-is
+  if (name.includes(' ') || name.includes('&')) return name;
+  // Fallback: convert CamelCase class names
   return name
     .replace(/Detector$/, '')
     .replace(/^LLM/, '')

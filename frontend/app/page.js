@@ -6,6 +6,7 @@ import Section3Evaluation from '@/components/sections/Section3Evaluation';
 import Section4Fix from '@/components/sections/Section4Fix';
 import Section5Guardrails from '@/components/sections/Section5Guardrails';
 import Section6Comparison from '@/components/sections/Section6Comparison';
+import Section7Scan from '@/components/sections/Section7Scan';
 
 const NAV = [
   { id: 1, label: 'Broken Chatbot' },
@@ -14,6 +15,7 @@ const NAV = [
   { id: 4, label: 'The Fix' },
   { id: 5, label: 'Guardrails' },
   { id: 6, label: 'Before vs After' },
+  { id: 7, label: 'Vulnerability Scan' },
 ];
 
 export default function Home() {
@@ -71,6 +73,7 @@ export default function Home() {
         beforeScores={beforeScores}
         onRunAfter={setAfterScores}
       />
+      <Section7Scan />
 
       {/* Footer */}
       <footer className="border-t border-gray-900 py-8 px-4 text-center">
